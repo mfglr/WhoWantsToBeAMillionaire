@@ -1,4 +1,8 @@
-﻿
+﻿string messageOfCorrectAnswer = "\nTebrikler doğru cevap!\n";
+string messageOfWrongAnswer = "\nMaalesef yanlış cevap!\n";
+string congratulatoryMessage = "Tebrikler büyük ödülü kazandınız!";
+string lossMessage = "Maalesef büyük ödülü kaybettiniz!";
+
 int numberOfCorrectAnswers = 0;
 string answer;
 
@@ -13,11 +17,11 @@ answer = Console.ReadLine().ToLower();
 if (answer == "a")
 {
     numberOfCorrectAnswers++;
-    Console.WriteLine("\nTebrikler doğru cevap!\n");
+    Console.WriteLine(messageOfCorrectAnswer);
 }
 else
 {
-    Console.WriteLine("\nMaalesef yanlış cevap!\n");
+    Console.WriteLine(messageOfWrongAnswer);
 }
 
 
@@ -32,16 +36,16 @@ answer = Console.ReadLine().ToLower();
 if (answer == "a")
 {
     numberOfCorrectAnswers++;
-    Console.WriteLine("\nTebrikler doğru cevap!\n");
+    Console.WriteLine(messageOfCorrectAnswer);
 }
 else
 {
-    Console.WriteLine("\nMaalesef yanlış cevap!\n");
+    Console.WriteLine(messageOfWrongAnswer);
 }
 
 
-if (numberOfCorrectAnswers == 2)
-    Console.WriteLine("Tebrikler büyük ödülü kazandınız!");
+if (numberOfCorrectAnswers == 0)
+    Console.WriteLine(lossMessage);
 else
 {
     // 3. soru
@@ -55,18 +59,18 @@ else
     if (answer == "b")
     {
         numberOfCorrectAnswers++;
-        Console.WriteLine("\nTebrikler doğru cevap!\n");
+        Console.WriteLine(messageOfCorrectAnswer);
     }
     else
     {
-        Console.WriteLine("\nMaalesef yanlış cevap!\n");
+        Console.WriteLine(messageOfWrongAnswer);
     }
 
     if (numberOfCorrectAnswers >= 2)
-        Console.WriteLine("Tebrikler büyük ödülü kazandınız!");
+        Console.WriteLine(congratulatoryMessage);
     else
     {
-        Console.WriteLine("Maalesef büyük ödülü kaybettiniz!");
+        Console.WriteLine(lossMessage);
     }
 }
 
